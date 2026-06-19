@@ -219,7 +219,7 @@
 
   /* Video reviews */
   .videos{background:var(--white)}
-  .video-grid{display:flex;flex-direction:column;align-items:center;gap:28px;margin-top:34px}
+  .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:34px;justify-items:center}
   .video-card{width:100%;max-width:420px;background:#fff;border:1px solid #eef1f6;border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow-card);transition:transform .2s ease,box-shadow .2s ease}
   .video-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,53,149,.18)}
   .video-frame{position:relative;width:100%;height:0;padding-bottom:177.78%;background:#0b1220}
@@ -285,7 +285,7 @@
     .hero h1{font-size:1.85rem}
     .h2,.problem h2,.shift h2,.offer h2,.promo h2,.ingredient h2{font-size:1.55rem}
     .final h2{font-size:1.7rem}
-    .cards,.reviews{grid-template-columns:1fr}
+    .cards,.reviews,.video-grid{grid-template-columns:1fr}
     .proof-grid{grid-template-columns:1fr}
     .award-grid{grid-template-columns:1fr}
     .footer .fcols{grid-template-columns:1fr;gap:24px}
@@ -419,8 +419,8 @@
     </div>
     <div class="figc reveal">
       <figure class="imgslot">
-        <img src="page-04.png" alt="DHA และธาตุเหล็ก เสริมสมองเด็ก" onerror="this.parentElement.classList.add('is-missing')">
-        <div class="ph"><span class="ic">🖼️</span><b>ภาพ DHA + ธาตุเหล็ก / เด็ก-สมอง</b><code>page-04.png</code></div>
+        <img src="NewImage4.png" alt="DHA และธาตุเหล็ก เสริมสมองเด็ก" onerror="this.parentElement.classList.add('is-missing')">
+        <div class="ph"><span class="ic">🖼️</span><b>ภาพ DHA + ธาตุเหล็ก / เด็ก-สมอง</b><code>NewImage4.png</code></div>
       </figure>
     </div>
   </div>
@@ -453,8 +453,8 @@
     </div>
     <div class="figc reveal">
       <figure class="imgslot">
-        <img src="page-06.png" alt="Probiotics บำรุงสมอง 5 สายพันธุ์เฉพาะ ดูแลสมองและอารมณ์" onerror="this.parentElement.classList.add('is-missing')">
-        <div class="ph"><span class="ic">🖼️</span><b>Probiotics 5 สายพันธุ์</b><code>page-06.png</code></div>
+        <img src="NewImage6.png" alt="Probiotics บำรุงสมอง 5 สายพันธุ์เฉพาะ ดูแลสมองและอารมณ์" onerror="this.parentElement.classList.add('is-missing')">
+        <div class="ph"><span class="ic">🖼️</span><b>Probiotics 5 สายพันธุ์</b><code>NewImage6.png</code></div>
       </figure>
     </div>
   </div>
@@ -501,18 +501,6 @@
   </div>
 </section>
 
-<section class="section promo">
-  <div class="wrap">
-    <span class="kicker reveal" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:var(--gold)">โปรโมชันพิเศษ</span>
-    <h2 class="reveal">ดูแลสมองลูกแบบครบกลไก ด้วย <span class="o">DHA Probio 9</span> และ <span class="o">DHA Probio 9+</span></h2>
-    <div class="promo-price reveal">
-      <span class="old">ปกติ 1,990.-</span>
-      <span class="new">790<small>บาท</small></span>
-    </div>
-    <span class="save reveal">ประหยัดทันที 1,200 บาท</span>
-  </div>
-</section>
-
 <section class="section offer" id="order">
   <div class="wrap" style="display:block">
     <figure class="imgslot reveal" style="max-width:680px;margin:0 auto">
@@ -555,6 +543,18 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section promo">
+  <div class="wrap">
+    <span class="kicker reveal" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:var(--gold)">โปรโมชันพิเศษ</span>
+    <h2 class="reveal">ดูแลสมองลูกแบบครบกลไก ด้วย <span class="o">DHA Probio 9</span> และ <span class="o">DHA Probio 9+</span></h2>
+    <div class="promo-price reveal">
+      <span class="old">ปกติ 1,990.-</span>
+      <span class="new">790<small>บาท</small></span>
+    </div>
+    <span class="save reveal">ประหยัดทันที 1,200 บาท</span>
   </div>
 </section>
 
