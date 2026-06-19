@@ -228,17 +228,21 @@
   /* Offer */
   .offer{background:linear-gradient(150deg,var(--tint-blue),var(--tint-blue2));position:relative;overflow:hidden}
   .offer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
-  .price-box{background:#fff;border-radius:var(--radius-card);padding:30px;box-shadow:var(--shadow-card);text-align:center;border:2px solid #cfe0ff}
-  .price-box .tag{display:inline-block;background:var(--blue);color:#fff;font-family:var(--font-head);font-weight:700;padding:8px 22px;border-radius:var(--radius-pill);font-size:1.05rem;margin-bottom:6px}
-  .price-box .price{font-family:var(--font-head);font-weight:700;color:var(--heading);font-size:3rem;line-height:1.1;margin-top:8px}
-  .price-box .price small{font-size:1.05rem;color:var(--muted);font-weight:600}
-  .price-box .note{color:var(--muted);font-weight:600;margin-top:4px}
-  .price-box ul{list-style:none;text-align:left;margin:18px auto 22px;max-width:300px;display:grid;gap:9px}
-  .price-box li{display:flex;gap:10px;align-items:flex-start;color:#39455e;font-weight:500}
-  .price-box li::before{content:"✓";color:var(--green-d);font-weight:800}
   .offer h2{font-size:1.95rem;color:var(--heading);font-weight:700}
   .offer h2 .o{color:var(--green-d)}
   .offer p{color:#4a5a78;font-weight:600;margin-top:10px;font-size:1.05rem}
+
+  /* Price promo banner */
+  .promo{background:linear-gradient(150deg,#003595,#013ba4);color:#fff;text-align:center;position:relative;overflow:hidden}
+  .promo::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:rgba(76,199,100,.16);right:-120px;bottom:-130px}
+  .promo .wrap{position:relative;z-index:2}
+  .promo h2{font-size:1.95rem;font-weight:700;color:#fff;max-width:24ch;margin:14px auto 0;line-height:1.35}
+  .promo h2 .o{color:var(--gold)}
+  .promo-price{display:inline-flex;align-items:baseline;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+  .promo-price .old{font-family:var(--font-head);font-weight:600;font-size:1.45rem;color:#aebfe0;text-decoration:line-through}
+  .promo-price .new{font-family:var(--font-head);font-weight:700;font-size:3.4rem;line-height:1;color:var(--gold)}
+  .promo-price .new small{font-size:1.2rem;font-weight:600;color:#fff;margin-left:6px}
+  .promo .save{display:inline-block;margin-top:16px;background:var(--red);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:8px 22px;border-radius:var(--radius-pill);box-shadow:0 8px 20px rgba(220,53,69,.35)}
 
   /* Final CTA */
   .final{background:linear-gradient(150deg,#003595,#013ba4);color:#fff;text-align:center}
@@ -279,7 +283,7 @@
     .hero .wrap,.problem .wrap,.mech .wrap,.ingredient .wrap,.offer .wrap{grid-template-columns:1fr}
     .ingredient.rev .figc{order:0}
     .hero h1{font-size:1.85rem}
-    .h2,.problem h2,.shift h2,.offer h2,.ingredient h2{font-size:1.55rem}
+    .h2,.problem h2,.shift h2,.offer h2,.promo h2,.ingredient h2{font-size:1.55rem}
     .final h2{font-size:1.7rem}
     .cards,.reviews{grid-template-columns:1fr}
     .proof-grid{grid-template-columns:1fr}
@@ -506,6 +510,36 @@
   </div>
 </section>
 
+<section class="section promo">
+  <div class="wrap">
+    <span class="kicker reveal" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:var(--gold)">โปรโมชันพิเศษ</span>
+    <h2 class="reveal">ดูแลสมองลูกแบบครบกลไก ด้วย <span class="o">DHA Probio 9</span> และ <span class="o">DHA Probio 9+</span></h2>
+    <div class="promo-price reveal">
+      <span class="old">ปกติ 1,990.-</span>
+      <span class="new">790<small>บาท</small></span>
+    </div>
+    <span class="save reveal">ประหยัดทันที 1,200 บาท</span>
+  </div>
+</section>
+
+<section class="section offer" id="order">
+  <div class="wrap" style="display:block">
+    <figure class="imgslot reveal" style="max-width:680px;margin:0 auto">
+      <img src="NewImage10.png" alt="โปรโมชัน DHA Probio 9 และ DHA Probio 9+ ซื้อ 1 แถม 1" onerror="this.parentElement.classList.add('is-missing')">
+      <div class="ph"><span class="ic">🖼️</span><b>ภาพโปรโมชัน</b><code>NewImage10.png</code></div>
+    </figure>
+  </div>
+</section>
+
+<section class="section final">
+  <div class="wrap reveal">
+    <figure class="imgslot final-product">
+      <img src="NewImage11.png" alt="DHA Probio 9 และ DHA Probio 9+ พัฒนาสมองลูก เพิ่มความจำ มีสมาธิ นอนหลับคุณภาพ" onerror="this.parentElement.classList.add('is-missing')">
+      <div class="ph"><span class="ic">🖼️</span><b>ภาพสินค้า DHA Probio 9 และ 9+</b><code>NewImage11.png</code></div>
+    </figure>
+  </div>
+</section>
+
 <section class="section videos" id="videos">
   <div class="wrap">
     <div class="video-grid">
@@ -530,45 +564,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section offer" id="order">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="kicker">โปรโมชันพิเศษ</span>
-      <h2>ดูแลสมองลูกแบบครบกลไก ด้วย <span class="o">DHA Probio 9</span> และ <span class="o">DHA Probio 9+</span></h2>
-      <p>ในราคา <strong>1,499 บาท</strong> แบบ <strong>ซื้อ 1 แถม 1</strong> — เติมครบทั้ง DHA, ธาตุเหล็ก, L-Theanine และ Probiotics 5 สายพันธุ์ ในชุดเดียว</p>
-      <figure class="imgslot" style="margin-top:20px">
-        <img src="page-10.png" alt="DHA สูตรคุณหมอ โปรซื้อ 1 แถม 1 ราคา 1,499" onerror="this.parentElement.classList.add('is-missing')">
-        <div class="ph"><span class="ic">🖼️</span><b>ภาพโปรซื้อ 1 แถม 1</b><code>page-10.png</code></div>
-      </figure>
-    </div>
-    <div class="price-box reveal">
-      <span class="tag">ซื้อ 1 แถม 1</span>
-      <div class="price">1,499<small> บาท</small></div>
-      <div class="note">รับไปเลย 2 กล่อง · ส่งฟรีทั่วไทย</div>
-      <ul>
-        <li>DHA 200 มก. + ธาตุเหล็กสูง เสริม IQ</li>
-        <li>L-Theanine จากญี่ปุ่น เพิ่มสมาธิ หลับสนิท</li>
-        <li>Probiotics 5 สายพันธุ์ ดูแลลำไส้และอารมณ์</li>
-        <li>สูตรหมอ การันตีด้วยรางวัลระดับสากล</li>
-      </ul>
-      <a href="#order" class="btn" data-line style="width:100%"><span class="ln">สนใจคลิก — สั่งซื้อทาง LINE</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="section final">
-  <div class="wrap reveal">
-    <span class="kicker" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:var(--gold)">พร้อมเริ่มดูแลสมองลูกแล้ว?</span>
-    <h2>สนใจคลิก เพื่อรับโปรซื้อ 1 แถม 1</h2>
-    <p>ทักแชทไลน์ Promom รับคำแนะนำจากทีมงาน พร้อมสั่งซื้อได้ทันที</p>
-    <figure class="imgslot final-product">
-      <img src="page-11.png" alt="DHA Probio 9 และ DHA Probio 9+ พัฒนาสมองลูก เพิ่มความจำ มีสมาธิ นอนหลับคุณภาพ" onerror="this.parentElement.classList.add('is-missing')">
-      <div class="ph"><span class="ic">🖼️</span><b>ภาพสินค้า DHA Probio 9 และ 9+</b><code>page-11.png</code></div>
-    </figure>
-    <a href="#order" class="btn btn-white" data-line><span class="ln">แชท LINE Promom เลย</span></a>
   </div>
 </section>
 
